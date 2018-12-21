@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "postgraphile -c \"${DATABASE_URL}\" --max-pool-size 20 --simple-collections only --disable-graphiql --legacy-relations omit --no-setof-functions-contain-nulls --skip-plugins graphile-build:NodePlugin",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "postgraphile": "^4.2.0"
+  }
 }
